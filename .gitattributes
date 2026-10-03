@@ -1,0 +1,18 @@
+# Normalise line endings so the same commit does not show up as a diff on
+# every machine. Files are stored with LF in the repo; Windows checkouts get
+# CRLF only where the tooling expects it.
+* text=auto eol=lf
+
+# Keep these binary-ish / generated files out of text normalisation.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary
+
+# Windows-native scripts must stay CRLF to execute.
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
